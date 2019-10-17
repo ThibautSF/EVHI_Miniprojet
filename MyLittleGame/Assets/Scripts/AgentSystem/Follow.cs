@@ -13,6 +13,8 @@ public class Follow : MonoBehaviour {
 	}
 
 	void Update () {
+		if (movingpoint == null)
+			return;
 		agent.destination = movingpoint.position;
 	}
 }

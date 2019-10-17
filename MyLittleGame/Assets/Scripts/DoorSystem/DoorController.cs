@@ -71,4 +71,4 @@ public class MyDoor {
 
 	[HideInInspector]
 	public Door doorComponent;
-}	
+}

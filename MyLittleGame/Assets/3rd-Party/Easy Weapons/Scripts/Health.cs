@@ -48,6 +48,11 @@ public class Health : MonoBehaviour
 			currentHealth = maxHealth;
 	}
 
+	//Modification by ThibautSF
+	public float GetHealth() {
+		return currentHealth;
+	}
+
 	public void Die()
 	{
 		// This GameObject is officially dead.  This is used to make sure the Die() function isn't called again

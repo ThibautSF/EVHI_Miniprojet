@@ -49,6 +49,9 @@ public class EyeLook : MonoBehaviour {
 		myBody.transform.Translate(Vector3.forward * movement);
 		myBody.transform.Translate(Vector3.right * sideStep);
 		*/
+	}
 
+	private void OnDestroy() {
+		Cursor.lockState = CursorLockMode.None;
 	}
 }
