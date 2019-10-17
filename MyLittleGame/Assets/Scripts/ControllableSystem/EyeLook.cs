@@ -12,7 +12,7 @@ public class EyeLook : MonoBehaviour {
 		Cursor.lockState = CursorLockMode.Locked;
 	}
 
-	void Update () {
+	void LateUpdate () {
 		// See mouse cursor again
 		if (Input.GetKey(KeyCode.Escape)) {
 			if (Cursor.lockState == CursorLockMode.Locked) {
@@ -25,8 +25,8 @@ public class EyeLook : MonoBehaviour {
 		if (Cursor.lockState == CursorLockMode.Locked) {
 			// How much has the mouse moved?
 			Vector2 mC = new Vector2(
-				Input.GetAxisRaw ("Mouse X") * 3f,
-				Input.GetAxisRaw("Mouse Y") * 3f
+				Input.GetAxis("Mouse X") * 3f,
+				Input.GetAxis("Mouse Y") * 3f
 				);
 
 			// To prevent over-rotation...

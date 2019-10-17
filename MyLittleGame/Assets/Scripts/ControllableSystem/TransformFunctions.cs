@@ -14,8 +14,8 @@ public class TransformFunctions : MonoBehaviour {
 		
 	}
 
-	void OnCollisionStay() {
-        isGrounded = true;
+	private void OnCollisionStay(Collision other) {
+        this.isGrounded = true;
     }
 
 	// Update is called once per frame
@@ -24,7 +24,7 @@ public class TransformFunctions : MonoBehaviour {
 		
 		float movement = Input.GetAxis("Vertical");
 		movement *= Time.deltaTime * mSpeed;
-		float sideStep = Input.GetAxis ("Horizontal");
+		float sideStep = Input.GetAxis("Horizontal");
 		sideStep *= Time.deltaTime * mSpeed;
 
 		this.transform.Translate(Vector3.forward * movement);

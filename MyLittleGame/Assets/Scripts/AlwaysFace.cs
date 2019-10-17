@@ -17,9 +17,7 @@ public class AlwaysFace : MonoBehaviour {
     // Update is called once per frame
     void LateUpdate() {
         if (target == null) {
-            Debug.Log(GameObject.FindGameObjectsWithTag("Player").Length);
-            this.target = GameObject.FindGameObjectWithTag("Player");
-            //this.target = GameObject.FindWithTag("Player");
+            this.target = GameObject.FindWithTag("Player");
             return;
         }
         
