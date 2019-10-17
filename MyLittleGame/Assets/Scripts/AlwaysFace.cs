@@ -10,10 +10,18 @@ public class AlwaysFace : MonoBehaviour {
     public float yAngleCorrection = 0f;
     public float zAngleCorrection = 0f;
 
+    private void Start() {
+        
+    }
+
     // Update is called once per frame
     void LateUpdate() {
-        if (target == null)
+        if (target == null) {
+            Debug.Log(GameObject.FindGameObjectsWithTag("Player").Length);
+            this.target = GameObject.FindGameObjectWithTag("Player");
+            //this.target = GameObject.FindWithTag("Player");
             return;
+        }
         
         Quaternion targetRotation = Quaternion.LookRotation(target.transform.position - this.transform.position);
         targetRotation *= Quaternion.Euler(xAngleCorrection, yAngleCorrection, zAngleCorrection);
